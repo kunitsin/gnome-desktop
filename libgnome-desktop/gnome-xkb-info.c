@@ -543,8 +543,6 @@ static void
 parse_rules (GnomeXkbInfo *self)
 {
   GnomeXkbInfoPrivate *priv = self->priv;
-  GSettings *settings;
-  gboolean show_all_sources;
   gchar *file_path;
   GError *error = NULL;
 
@@ -574,13 +572,6 @@ parse_rules (GnomeXkbInfo *self)
   if (error)
     goto cleanup;
   g_free (file_path);
-
-  settings = g_settings_new ("org.gnome.desktop.input-sources");
-  show_all_sources = g_settings_get_boolean (settings, "show-all-sources");
-  g_object_unref (settings);
-
-  if (!show_all_sources)
-    return;
 
   file_path = get_xml_rules_file_path (".extras.xml");
   parse_rules_file (self, file_path, &error);
