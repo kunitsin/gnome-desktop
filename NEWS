@@ -1,4 +1,84 @@
 ================
+Version   3.16.0
+================
+
+- Translation updates
+
+================
+Version  3.15.92
+================
+
+- Translation updates
+
+================
+Version  3.15.91
+================
+
+ - No changes
+
+================
+Version  3.15.90
+================
+
+- Drop libgsystem dependency (#680326)
+- Translation updates
+
+===============
+Version  3.15.4
+===============
+
+- Modernize gtk-doc use (#742479)
+- Fix memory handling in GnomeRR and language code (#742111, #742569)
+
+===============
+Version  3.15.3
+===============
+
+- Fix mutex handling in thumbnailing code (#740666)
+
+=================
+Version  3.15.2.1
+=================
+
+- Fix thumbnailing failures due to internal cleanups (#684026)
+
+===============
+Version  3.15.2
+===============
+
+- Add installed tests (#737140)
+- Recognize builtin monitors in Dell machines (#740289)
+- Improve thumbnail handling (#684026)
+- Translation updates
+
+===============
+Version  3.15.1
+===============
+
+- languages: Use a more broadly compatible locale codeset suffix (#710412)
+- Remove unused code in gtk-reftest (#737123)
+- Translation updates
+
+===============
+Version  3.14.1
+===============
+
+- Translation updates
+
+===============
+Version  3.14.0
+===============
+
+- Translation updates
+
+================
+Version  3.13.92
+================
+
+- Fixed the build on systems lacking openat()
+- Translation updates
+
+================
 Version  3.13.91
 ================
 

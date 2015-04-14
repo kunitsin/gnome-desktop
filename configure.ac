@@ -1,6 +1,6 @@
 m4_define(gnome_platform, 3)
-m4_define(gnome_minor, 13)
-m4_define(gnome_micro, 91)
+m4_define(gnome_minor, 16)
+m4_define(gnome_micro, 0)
 dnl gnome_sub is an optional sub-version which will not be advertised to the user
 dnl It allows to release a 2.30.1.1 which is just a better 2.30.1
 dnl Leave empty if not needed
@@ -133,7 +133,6 @@ AC_CHECK_LIB([rt], [clock_gettime], [LIBRT="-lrt"], [LIBRT=""])
 AC_SUBST(LIBRT)
 
 AC_CHECK_FUNCS([openat])
-AM_CONDITIONAL([USE_LIBGSYSTEM], [test x$ac_cv_func_openat = xyes])
 
 dnl we need x11 for GnomeBG
 
@@ -201,7 +200,7 @@ AM_GLIB_GNU_GETTEXT
 GOBJECT_INTROSPECTION_CHECK([0.9.7])
 
 # check for gtk-doc
-GTK_DOC_CHECK([1.4])
+GTK_DOC_CHECK([1.14],[--flavour no-tmpl])
 
 AC_CONFIG_FILES([
 Makefile
